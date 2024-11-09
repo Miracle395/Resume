@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="novi.png" type="image/gif" sizes="16x16">
+    <title>Novique - Create A Professional Resume.</title>
+  <!-- Font Awesome Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/trading/css/style.css">
+     <!-- Link to Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check_circle" />
+
+    <style>
+    .navbar-toggler {
+        border: none;
+        background: transparent;
+        padding: 0;
+    }
+
+    .navbar-toggler-icon {
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+        content: '';
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-toggler-icon::before {
+        top: -10px;
+    }
+
+    .navbar-toggler-icon::after {
+        top: 10px;
+    }
+
+    .navbar-toggler.collapsed .navbar-toggler-icon {
+        background-color: transparent;
+    }
+
+    .navbar-toggler.collapsed .navbar-toggler-icon::before {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .navbar-toggler.collapsed .navbar-toggler-icon::after {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+        transform: rotate(0) translate(0, 0);
+    }
+
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+        transform: rotate(0) translate(0, 0);
+    }
+</style>
+
+    <style>
+    
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Class added when a section is visible */
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+    </style>
+</head>
+
+<body style="background-color: #E9F1F7;">
+  <nav style="background-color: #2274A5;" class="navbar navbar-expand-lg navbar-dark py-3">
+    <div class="container">
+        <a href="/">
+            <img style="width: 123px;" src="novi.png" alt="Novi Logo"> 
+        </a>
+        <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-toggle="collapse" 
+            data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul style="font-family: 'Times New Roman', serif;" class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a style="color: #264653;" class="nav-link mr-3" href="#nextSection">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: #264653;" class="nav-link mr-3" href="#wallet">Our Services</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: #264653;" class="nav-link mr-3" target="_blank" href="#storage">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: #264653;" class="nav-link mr-3" href="#tipbots">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: #264653;" class="nav-link mr-3" href="#explorer">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: #264653;" class="nav-link mr-3" href="#footer">About Novique</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header>
+
+    <div style="position: relative; width: 100vw; height: 35vh; overflow: hidden;">
+    <img 
+        src="ai1.png" 
+        alt="" 
+        class="background-image" 
+        style="
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            opacity: 1; /* Show the first image initially */
+            transition: opacity 1s ease-in-out;">
+    <img 
+        src="r1.png" 
+        alt="" 
+        class="background-image" 
+        style="
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            opacity: 0;
+            transition: opacity 1s ease-in-out;">
+    <img 
+        src="r3.png" 
+        alt="" 
+        class="background-image" 
+        style="
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            opacity: 0;
+            transition: opacity 1s ease-in-out;">
+    <img 
+        src="r4.png" 
+        alt="" 
+        class="background-image" 
+        style="
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            opacity: 0;
+            transition: opacity 1s ease-in-out;">
+            
+    <img 
+        src="r5.png" 
+        alt="" 
+        class="background-image" 
+        style="
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            opacity: 0;
+            transition: opacity 1s ease-in-out;">
+</div>
+
+<script>
+    const images = document.querySelectorAll('.background-image');
+    let currentIndex = 0;
+
+    function showNextImageSequentially() {
+        images[currentIndex].style.opacity = 0; // Hide current image
+        currentIndex = (currentIndex + 1) % images.length; // Move to next index
+        images[currentIndex].style.opacity = 1; // Show next image
+    }
+
+    function startRandomSlideshow() {
+        setInterval(() => {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            images.forEach((img, index) => {
+                img.style.opacity = index === randomIndex ? 1 : 0;
+            });
+        }, 3000); // Change image every 3 seconds
+    }
+
+    function startSlideshow() {
+        const sequentialDisplay = setInterval(() => {
+            showNextImageSequentially();
+            if (currentIndex === 0) { // After one full cycle, start random slideshow
+                clearInterval(sequentialDisplay);
+                startRandomSlideshow();
+            }
+        }, 3000); // Show each image sequentially every 3 seconds
+    }
+
+    startSlideshow(); // Start the slideshow
+</script>
+
+<section style="margin-top: 21px; padding-top: 60%; background-color: light blue">
+    
+   <left> <h3 style="font-family: times new roman; font-weight: 600; color: #264653; margin-top: -55%; margin-left: 5%;">
+       A SuperApp for
+    </h3></left>
+   
+   
+    <left> <h3 style="font-family: times new roman; font-weight: 600; color: #191970; margin-top: 2%; margin-left: 5%;">
+      Consultants
+    </h3></left>
+    
+    
+    </br>
+    <div style="font-family: times new roman; color: #264653; margin-left: 5%; line-height: 1.6;"><h6>
+        CRM, Proposals, Contracts, Invoices, Client Onboarding, Chat, Tasks, Notes and Files Management - All on the same platform.
+    </h6></div> </br>
+    
+      <button style="
+            background: linear-gradient(90deg, #0066ff, #1e90ff, #00bfff);
+            color: white;
+            border: none;
+            padding: 16px 125px;
+            border-radius: 50px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            margin-left: 5%;
+        ">
+            GET A RESUME
+            
+        </button>
+        
+        <button 
+    style="
+        background: linear-gradient(90deg, #003366, #00509E, #0066CC); /* Dark blue gradient */
+        color: white;
+        border: none;
+        padding: 16px 125px;
+        border-radius: 50px;
+        font-size: 16px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-family: 'Times New Roman', serif;
+        margin-left: 5%;
+        transition: background 0.3s ease;
+    "
+    onmouseover="this.style.background='linear-gradient(90deg, #002244, #003366, #004488)'" /* Darker gradient on hover */
+    onmouseout="this.style.background='linear-gradient(90deg, #003366, #00509E, #0066CC)'"
+>
+    GET STARTED
+</button>
+        
+        
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; padding: 20px;">
+
+    <div style="max-width: 600px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #f9f9f9;">
+        <form onsubmit="processInput(event)" style="display: flex; align-items: center;">
+            <input type="text" id="userInput" placeholder="Tell us your email." style="flex-grow: 1; padding: 10px; font-size: 16px; border: 1px solid #ddd; border-radius: 4px; font-family: times new roman;">
+            <button type="submit" style="margin-left: 10px; padding: 10px 20px; background-color: #2A9D8F; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                &#8594;
+            </button>
+        </form>
+        <div id="output" style="margin-top: 20px; font-size: 16px; color: #333;"></div>
+    </div>
+
+    <script>
+        function processInput(event) {
+            event.preventDefault();
+            var input = document.getElementById('userInput').value;
+            var outputDiv = document.getElementById('output');
+
+            // Simulate processing and output
+            if (input) {
+                outputDiv.innerHTML = "Processing your request: " + input;
+            } else {
+                outputDiv.innerHTML = "Please enter something to process.";
+            }
+        }
+    </script>
+
+
+</br></br>
+</section>
+
+
+         <div class="section" style="width: 100%; max-width: 1200px; margin: 0 auto; overflow: hidden; background-color: #2274A5; padding: 20px 0;">
+    <div class="testimonials-container" style="display: flex; width: calc(100% * 10); animation: scroll-horizontal 45s linear infinite;">
+        <!-- Duplicate testimonials for seamless scrolling -->
+        <div style="flex: 0 0 5%; height: 200px; box-sizing: border-box; background-color: #E7DFC6; margin: 0 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+            
+        </div>
+        <div style="flex: 0 0 5%; height: 200px; box-sizing: border-box; background-color: #E7DFC6; margin: 0 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+            
+        </div>
+        <div style="flex: 0 0 5%; height: 200px; box-sizing: border-box; background-color: #E7DFC6; margin: 0 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+            
+        </div>
+        <div style="flex: 0 0 5%; height: 200px; box-sizing: border-box; background-color: #E7DFC6; margin: 0 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+            
+        </div>
+        <div style="flex: 0 0 5%; height: 200px; box-sizing: border-box; background-color: #E7DFC6; margin: 0 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+            
+        </div>
+        <!-- Duplicated testimonials for seamless effect -->
+        <div style="flex: 0 0 5%; height: 200px; box-sizing: border-box; background-color: #E9C46A; margin: 0 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+            
+        </div>
+        <div style="flex: 0 0 5%; height: 200px; box-sizing: border-box; background-color: #E7DFC6; margin: 0 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+            
+        </div>
+        <div style="flex: 0 0 5%; height: 200px; box-sizing: border-box; background-color: #E7DFC6; margin: 0 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+            
+        </div>
+        <div style="flex: 0 0 5%; height: 200px; box-sizing: border-box; background-color: #E7DFC6; margin: 0 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+            
+        </div>
+        <div style="flex: 0 0 5%; height: 200px; box-sizing: border-box; background-color: #E7DFC6; margin: 0 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+            
+        </div>
+    </div>
+</div>
+
+<!-- Inline CSS for horizontal scrolling animation -->
+<style>
+    @keyframes scroll-horizontal {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+</style>
+
+<!-- JavaScript for pausing animation on hover -->
+<script>
+    const testimonialsContainer = document.querySelector('.testimonials-container');
+
+    testimonialsContainer.addEventListener('mouseover', () => {
+        testimonialsContainer.style.animationPlayState = 'paused';
+    });
+
+    testimonialsContainer.addEventListener('mouseout', () => {
+        testimonialsContainer.style.animationPlayState = 'running';
+    });
+</script>
+
+</br></br>
+<div style="background-color: white; margin-top: 10%;">
+<section style="font-family: times new roman; background-color: white;">
+    <h3 style="color: #264653;"><center></br></br>Attract <span style="color: blue;">more clients</span>, serve them better and keep them longer.</center></h3>
+    </br></br>
+    
+
+<center style="color: #131B23;">
+
+    <h6>
+        Tired of having to set up clients on multiple platforms for communication, billing, and project management (and the cost that comes with it)?
+    </h6>
+    </br>
+    <h6>
+        Ditch Slack, Asana, Simple Invoices - Novique does all that for you.
+
+    </h6>
+</center>
+</br></br>
+
+<img class="section" src="latest.png" style="height: 35vh; margin-left: 7%;"  alt=""> </br></br>
+
+<h4 style="color: #264653;"><center>Build a <span style="color: blue;">branded client</span> portal for your business</center></h4>
+    </br></br>
+
+<center style="color: #131B23;">
+    <h6 style="line-height: 1.6;">
+        Create a branded client platform for your agency with a customizable client onboarding process, dedicated private & group chats channels as well as client specific resources sections.
+    </h6>
+</center>
+
+</br></br>
+<img class="section" src="latest.png" style="height: 35vh; margin-left: 7%" alt=""> </br></br>
+
+<h4 style="color: #264653;"><center>Manage <span style="color: blue;">project & tasks.</span> </center></h4>
+    </br>
+
+<center style="color: #131B23;">
+    <h6 style="line-height: 1.6;">
+        Manage marketing, sales, operations, development tasks & projects in one easy-to-use platform. Share projects and tasks with clients so they can collaborate.</h6>
+</center>
+
+</br></br>
+<img class="section" src="latest2.png" style="height: 35vh; margin-left: 7%" alt=""> </br></br>
+
+<h4 style="color: #264653;"><center>Send Invoices & <span style="color: blue;">Get Paid</span> </center></h4> </br>
+
+    <center style="color: #131B23;">
+    <h6 style="line-height: 1.6;">
+        Bill your clients directly from inside the platform. Automated recurring billing for retainers. Integrates with Stripe, PayPal and bank accounts.</h6>
+</center> 
+
+</br></br>
+<img class="section" src="latest3.png" style="height: 35vh; margin-left: 7%" alt=""> </br></br>
+    </section> 
+    
+   <section class="section" style="font-family: times new roman;">
+      <button 
+    style="
+        background-color: #E7DFC6;
+        color: #333333;
+        border: none;
+        padding: 10px 34px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-family: times new roman, sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        outline: none;
+        display: inline-flex;
+        align-items: center;
+        transition: color 0.3s ease;
+        margin-left: 30%;
+        margin-top: 10%;
+    "
+>
+  <strong> WE</strong> <span style="color: #0073e6; margin-left: 4px;"><strong>GET YOU</strong></span>
+</button>
+ </br></br>
+
+<h4 style="text-align: center; margin-top: 5%;">
+    Built By Agency Owners For Agency Owners.
+</h4> 
+    
+    <p style="margin-top:10%; text-align: center; font-size: 14px;">
+        We understand the true challenges faced by onboarding clients, sending invoices, communication, project management and more.
+    </p>
+    
+    <p style="margin-top:10%; text-align: center;font-size: 14px;">
+        But, if you love spending hours building spreadsheets and setting up complex processes for your agency this tool is not for you!
+    </p>
+    
+    <p style="margin-top:10%; text-align: center; margin-left: 5%;font-size: 14px;">
+        This tool is built to <span style="color: blue;">simplify your agency </span>not make it more complicated. </br></br></br></br>
+    </p>
+    
+ </section> </div></br></br>
+
+<center><section>
+<div class="section" style="background-color: #234F77; border-radius: 10%; padding: 30px; width: 350px; font-family: times new roman; color: #E9F1F7;">
+    <div style="display: flex; align-items: center;">
+        <div style="background-color: #262626; padding: 10px; border-radius: 50%; margin-right: 10px;">
+            <img src="try1.svg" alt="Cat Icon" style="height: 50px;">
+        </div>
+        <div>
+            <h1 style="font-size: 15px; margin: 0;text-align: left;"><strong>Get More Clients And Increase Your Client Retention Rate.</strong></h1>
+        </div>
+    </div>
+    
+    <p style="font-size: 14px; margin-top: 20px; line-height: 1.5;text-align:left;">Most clients report they leave because of inefficient communication and a lack of alignment. Not because of a lack of results! </br></br></br> Novique solves this problem by eliminiating inefficiency and confusion and ensuring seamless communication with your team members and clients.</br>
+    
+    </p>
+    
+</div>
+</section></center> 
+
+
+    </br></br>  <center><section>
+<div class="section" style="background-color: #234F77; border-radius: 10%; padding: 30px; width: 350px; font-family: times new roman; color: #E9F1F7;">
+    <div style="display: flex; align-items: center;">
+        <div style="background-color: #262626; padding: 10px; border-radius: 50%; margin-right: 10px;">
+            <img src="try3.svg" alt="Cat Icon" style="height: 50px;">
+        </div>
+        <div>
+            <h1 style="font-size: 15px; margin: 0;text-align: left;"><strong>Keep Your Clients Always Up-To-Date.</strong></h1>
+        </div>
+    </div>
+    
+    <p style="font-size: 14px; margin-top: 20px; line-height: 1.5;text-align:left;">Eliminate another client concern ‘what are you working on?’ with the Client Dashboard: an instant and intuitive way for your client to check on work progress, tasks, projects, results and more. </br></br></br> Reduce unnecessary communication and increase your client’s satisfaction. No more manual updates or pestering emails.</br>
+    
+    </p>
+    
+</div>
+</section></center>
+
+</br></br>  <center><section>
+<div class="section" style="background-color: #234F77; border-radius: 10%; padding: 30px; width: 350px; font-family: times new roman; color: #E9F1F7;">
+    <div style="display: flex; align-items: center;">
+        <div style="background-color: #262626; padding: 10px; border-radius: 50%; margin-right: 10px;">
+            <img src="try2.svg" alt="Cat Icon" style="height: 50px;">
+        </div>
+        <div>
+            <h1 style="font-size: 15px; margin: 0;text-align: left;"><strong>All-In-One Place. Consolidate Your Tech Stack.</strong></h1>
+        </div>
+    </div>
+    
+    <p style="font-size: 14px; margin-top: 20px; line-height: 1.5;text-align:left;">One login. One platform. One software. No more splitting your comunication efforts throughout 2-3 different apps. </br></br></br> Sign-up in 5 minutes, onboard a client in 7 minutes, and become an expert in 2 hours: simple. Your clients will love it.</br>
+    
+    </p>
+    
+</div>
+</section></center>
+</br> </br>
+<button 
+    style="
+        background: linear-gradient(90deg, #003366, #00509E, #0066CC); /* Dark blue gradient */
+        color: white;
+        border: none;
+        padding: 16px 125px;
+        border-radius: 50px;
+        font-size: 16px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-family: 'Times New Roman', serif;
+        margin-left: 5%;
+        transition: background 0.3s ease;
+    "
+    onmouseover="this.style.background='linear-gradient(90deg, #002244, #003366, #004488)'" /* Darker gradient on hover */
+    onmouseout="this.style.background='linear-gradient(90deg, #003366, #00509E, #0066CC)'"
+>
+    GET STARTED
+</button>
+
+
+ </br></br></br>
+ 
+ <div class="section" style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f5f8fa;">
+    <div style="
+        width: 300px;
+        padding: 20px;
+        border: 2px solid #1e90ff;
+        border-radius: 20px;
+        background-color: white;
+        font-family: 'Times New Roman', sans-serif;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+    ">
+        <!-- Icon on the left side -->
+        <img src="diam.svg" style="position: relative; top: 20px; left: -105px; height: 7vh;" alt="">
+
+        <!-- Plan Name and Price -->
+        <div style="
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            margin-top: -13%;
+        ">$29</div>
+        <div style="
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 16px;
+        ">USD / Month</div>
+        
+        <!-- Plan Details -->
+        <div style="
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 16px;
+            text-align: left;
+        "><strong>This plan includes 1 user, and:</strong></div>
+        
+        <ul style="
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        ">
+            <li style="display: flex; align-items: center; margin-bottom: 5px;">
+                <span class="material-symbols-outlined" style="margin-right: 8px; color: #28a745;">check_circle</span> 
+                Unlimited flows
+            </li>
+            <li style="display: flex; align-items: center;margin-bottom: 7px;">
+                <span class="material-symbols-outlined" style="margin-right: 8px;color: #28a745;">check_circle</span> 
+                Unlimited client spaces
+            </li>
+            <li style="display: flex; align-items: center;margin-bottom: 7px;">
+                <span class="material-symbols-outlined" style="margin-right: 8px;color: #28a745;">check_circle</span> 
+                Unlimited proposals
+            </li>
+            <li style="display: flex; align-items: center;margin-bottom: 7px;">
+                <span class="material-symbols-outlined" style="margin-right: 8px;color: #28a745;">check_circle</span> 
+                Unlimited invoices
+            </li>
+            <li style="display: flex; align-items: center;margin-bottom: 7px;">
+                <span class="material-symbols-outlined" style="margin-right: 8px;color: #28a745;">check_circle</span> 
+                Unlimited notes
+            </li>
+            <li style="display: flex; align-items: center;margin-bottom: 7px;">
+                <span class="material-symbols-outlined" style="margin-right: 8px;color: #28a745;">check_circle</span> 
+                Unlimited CRM
+            </li>
+            <li style="display: flex; align-items: center;margin-bottom: 7px;">
+                <span class="material-symbols-outlined" style="margin-right: 8px;color: #28a745;">check_circle</span> 
+                Unlimited boards
+            </li>
+            <li style="display: flex; align-items: center;margin-bottom: 7px;">
+                <span class="material-symbols-outlined" style="margin-right: 8px;color: #28a745;">check_circle</span> 
+                Unlimited chat
+            </li> 
+            <li style="display: flex; align-items: center;margin-bottom: 7px;">
+                <span class="material-symbols-outlined" style="margin-right: 8px;color: #28a745;">check_circle</span> 
+                Unlimited tasks
+            </li> 
+            <li style="display: flex; align-items: center;margin-bottom: 7px;">
+                <span class="material-symbols-outlined" style="margin-right: 8px;color: #28a745;">check_circle</span> 
+                Unlimited calendars
+            </li>
+        </ul>
+
+        <!-- Additional Users Section -->
+        <div style="
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            text-align: left;
+        ">Additional users</div>
+        
+        <div style="
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #f7f8fa;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 14px;
+            color: #333;
+        ">
+            <div style="display: flex; align-items: center;">
+                <span class="material-symbols-outlined" style="margin-right: 8px;color: #28a745;">check_circle</span> 
+                $12 per team member / month
+            </div>
+            <div style="display: flex; align-items: center;">
+                <span class="material-symbols-outlined" style="margin-right: 8px;color: #28a745;">check_circle</span> 
+                $12 per client user / month
+            </div>
+        </div>
+
+        <!-- Get Started Button -->
+        <button style="
+            background: linear-gradient(90deg, #0066ff, #1e90ff, #00bfff);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        ">
+            GET STARTED
+            
+        </button>
+    </div>
+</div>
+ 
+ </br></br>
+ 
+ <section>
+    
+ <div>
+ <h5 class="section" style="margin-left: 6%;font-family: times new roman;"> Join <span style="color: blue;"> 23,000+ </span> Businesses Using Novique. </h5>
+ 
+ 
+ <p style="font-size: 13px; margin-left: 6%; font-family: times new roman; line-height:1.6;">
+     All your operations in one place. Easy to use. Client friendly. Save money from day one.
+ </p>
+ 
+ <button 
+    style="
+        background: linear-gradient(90deg, #0066ff, #1e90ff, #00bfff); /* Blue gradient */
+        color: white;
+        border: none;
+        padding: 12px 40px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+        text-transform: uppercase;
+        margin-left: 6%;
+    "
+>
+    TRY FOR FREE
+</button>
+ </section> </br>
+ 
+ <img class="section" src="phone.png" style="height: 46vh; margin-left: 5%;" alt="">
+ 
+ </div>
+ 
+    <footer class="section" style="display: flex; justify-content: space-around; background-color: #131B23; padding: 40px 0; font-family: times new roman;">
+        
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+            <h4 style="font-size: 14px; font-weight: bold; color: #E9F1F7; margin: 0; position: relative;">
+                PRODUCTS
+                <span style="display: block; width: 30px; height: 2px; background-color: #2274A5; margin-top: 5px;"></span>
+            </h4>
+            <a href="#" style="text-decoration: none; font-size: 12px; color: #B0BEC5;">Pricing</a>
+            <a href="#" style="text-decoration: none; font-size: 12px; color: #B0BEC5;">Try For Free</a>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+            <h4 style="font-size: 14px; font-weight: bold; color: #E9F1F7; margin: 0; position: relative;">
+                SOLUTIONS
+                <span style="display: block; width: 30px; height: 2px; background-color: #2274A5; margin-top: 5px;"></span>
+            </h4>
+            <a href="#" style="text-decoration: none; font-size: 12px; color: #B0BEC5;">Client Communication</a>
+            <a href="#" style="text-decoration: none; font-size: 12px; color: #B0BEC5;">Team Communication</a>
+            <a href="#" style="text-decoration: none; font-size: 12px; color: #B0BEC5;">Client Billing</a>
+            <a href="#" style="text-decoration: none; font-size: 12px; color: #B0BEC5;">Task Management</a>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+            <h4 style="font-size: 14px; font-weight: bold; color: #E9F1F7; margin: 0; position: relative;">
+                COMPANY
+                <span style="display: block; width: 30px; height: 2px; background-color: #2274A5; margin-top: 5px;"></span>
+            </h4>
+            <a href="#" style="text-decoration: none; font-size: 12px; color: #B0BEC5;">Careers</a>
+            <a href="#" style="text-decoration: none; font-size: 12px; color: #B0BEC5;">Privacy Policy</a>
+            <a href="#" style="text-decoration: none; font-size: 12px; color: #B0BEC5;">Terms & Conditions</a>
+            <a href="#" style="text-decoration: none; font-size: 12px; color: #B0BEC5;">Case Studies</a>
+        </div> 
+        
+    </footer>
+
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script> 
+            
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"crossorigin="anonymous"></script>
+     
+   <script>
+  $(document).ready(function(){
+    $('.navbar-toggler').click(function(){
+      $(this).toggleClass('collapsed');
+    });
+  });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".section");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            } else {
+                entry.target.classList.remove("active"); // Optional: remove class when scrolled out
+            }
+        });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+</script>
+
+    </body>
+    </html>
+    
